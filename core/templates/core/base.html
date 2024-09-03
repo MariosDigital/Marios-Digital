@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{% block title %}{% endblock %} | Mario's Digital</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+{% load static %}
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Work+Sans:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'core/fonts/icomoon/style.css' %}">
+
+<link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/jquery-ui.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/bootstrap-datepicker.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/animate.css' %}">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+<link rel="stylesheet" href="{% static 'core/fonts/flaticon/font/flaticon.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/aos.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+
+<!-- CSS para la marquesina moderna -->
+<style>
+  .marquee-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .marquee h2 {
+    display: inline-block;
+    padding-right: 100%; /* Ajusta este valor según sea necesario */
+  }
+</style>
+
+</head>
+<body style="background-image: url('{% static 'core/images/bg.jpg' %}');">
+<div class="site-wrap">
+
+
+
+<div class="site-mobile-menu">
+<div class="site-mobile-menu-header">
+<div class="site-mobile-menu-close mt-3">
+  <span class="icon-close2 js-menu-toggle"></span>
+</div>
+</div>
+<div class="site-mobile-menu-body"></div>
+</div>
+
+<!-- Barra superior fondo blanco -->
+
+<div class="site-navbar-wrap js-site-navbar bg-white">
+<div class="container">
+<div class="site-navbar bg-light">
+    <div class="row align-items-center">
+
+<!-- Barra superior fondo blanco -->        
+        
+        <!-- Marquesina moderna -->
+        <div class="col-2 marquee-container">
+            <div class="marquee">
+                <h2 class="mb-0 site-logo"><a href="{% url 'home' %}" class="font-weight-bold">Mario's Digital</a></h2>
+            </div>
+        </div>
+        <!-- Fin de la marquesina -->
+
+<!-- Aquí está la barra de navegación -->
+          <div class="col-10">
+              <nav class="site-navigation text-right" role="navigation">
+                  <div class="container">
+                      <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+                      <ul class="site-menu js-clone-nav d-none d-lg-block">
+                      <li class="{% if request.path == '/' %} active {% endif %}"><a href="{% url 'home' %}">Home</a></li>
+                      <li class="{% if request.path == '/about/' %} active {% endif %}"><a href="{% url 'about' %}">About</a></li>
+                      <li class="{% if request.path == '/services/' %} active {% endif %}"><a href="{% url 'services' %}">Services</a></li>
+                      <li class="{% if request.path == '/contact/' %} active {% endif %}"><a href="{% url 'contact' %}">Contact</a></li>                      
+                      <li><a href="{% url 'contact' %}"><span class="d-inline-block p-3 bg-primary text-white btn btn-primary">Get A Quote</span></a></li>
+                    </ul>
+                  </div>
+              </nav>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+{% block content %}{% endblock %} 
+
+<div class="py-5 bg-primary">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+        <h2 class="text-uppercase text-white mb-0">Mario's Digital Services</h2>
+      </div>
+      <div class="col-md-3 ml-auto text-center text-md-left">
+        <a href="{% url 'contact' %}" class="btn btn-bg-primary d-inline-block d-md-block font-secondary text-uppercase">Contact Us</a> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Start -->     
+<footer class="site-footer">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3 class="footer-heading mb-4 text-white">About Us</h3>
+      <p>We repair a wide range of electronic devices.</p>
+      <p><a href="{% url 'services' %}" class="btn btn-primary rounded text-white px-4">Read More</a></p>
+    </div>
+    <div class="col-md-5 ml-auto">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="footer-heading mb-4 text-white">Quick Menu</h3>
+            <ul class="list-unstyled">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/services/">Services</a></li>
+              <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+          <h3 class="footer-heading mb-4 text-white">Our Services</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">We repair</a></li>
+              <li><a href="#">Advisory</a></li>
+              <li><a href="#">Maintenance</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Follow us</h3></div>
+        <div class="col-md-12">
+          <p>
+            <a href="#" class="pb-2 pr-2 pl-0"><span class="icon-facebook"></span></a>
+            <a href="#" class="p-2"><span class="icon-instagram"></span></a>
+          </p>
+        </div>
+    </div>
+  </div>
+  <div class="row pt-5 mt-5 text-center">
+    <div class="col-md-12">
+      <p>
+<!-- Footer End -->
+
+
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy; <script>document.write(new Date().getFullYear());</script> Mario's Digital All Rights Reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </p>
+    </div>
+    
+  </div>
+</div>
+</footer>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="{% static 'core/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'core/js/jquery-migrate-3.0.1.min.js' %}"></script>
+<script src="{% static 'core/js/jquery-ui.js' %}"></script>
+<script src="{% static 'core/js/popper.min.js' %}"></script>
+<script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'core/js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'core/js/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'core/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'core/js/bootstrap-datepicker.min.js' %}"></script>
+<script src="{% static 'core/js/aos.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'core/js/main.js' %}"></script>
+
+</body>
+</html>

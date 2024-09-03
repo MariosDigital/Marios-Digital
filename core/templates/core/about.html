@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .text-justify-custom {
+        text-align: justify;
+    }
+</style>
+
+<div class="site-blocks-cover inner-page overlay" style="background-image: url('{% static 'core/images/about.jpg' %}');" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 text-center" data-aos="fade">
+            <h1 class="text-uppercase">About Us</h1>
+            <span class="caption d-block text-white">Heirs of an Electronic Dynasty</span>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-uppercase">A Tradition of Excellence</h2>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <img src="{% static 'core/images/dinastia.jpg' %}" alt="image" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <p class="text-justify-custom">In our company, we uphold a family tradition that dates back to the beginnings of my father, Mr. Mario Montoya Córdoba, in the city of Veracruz, Mexico. Over a decade ago, we decided to continue his legacy and founded our own electronic equipment repair company, maintaining the same passion for innovation and excellence that he instilled in us.</p>
+            </div>
+            <div class="col-md-4">
+                <p class="text-justify-custom">The Legacy of Mario Montoya Córdoba: My father, Mario, was a visionary in the field of electronics. From his early days in the business, he stood out for his ability to diagnose and solve problems in electronic devices efficiently. His dedication and love for technology are qualities that still inspire our daily work.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends 'core/base.html' %}
+{% load static %} 
+
+{% block content %}
+
+<!-- Carrusel Start -->  
+    <div class="slide-one-item home-slider owl-carousel">   
+      <div class="site-blocks-cover inner-page overlay" style="background-image: url({% static 'core/images/home.jpg' %});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade">
+              <h1 class="font-secondary font-weight-bold text-uppercase">Wellcome to Mario's Digital</h1>
+              <span class="caption d-block text-white">We repair TV's Computers and Video Games</span>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div class="site-blocks-cover inner-page overlay" style="background-image: url({% static 'core/images/bgr-2.jpg' %});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+              <h1 class="font-secondary font-weight-bold text-uppercase">We repair electronic devices</h1>
+              <span class="caption d-block text-white"></span>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="site-blocks-cover inner-page overlay" style="background-image: url({% static 'core/images/car1.jpg' %});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-md-7 text-center" data-aos="fade">
+              <h1 class="font-secondary font-weight-bold text-uppercase">For every problem there is a solution</h1>
+              <span class="caption d-block text-white"></span>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+   <!-- Carrusel End -->  
+    
+  <!-- Outstanding Services -->  
+<style>
+    .site-section p {
+      text-align: justify;
+    }
+  </style>
+  <title>Document</title>
+
+   <div class="site-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-12 text-center">
+        <span class="caption d-block mb-2 font-secondary font-weight-bold">Outstanding Services</span>
+        <h2 class="site-section-heading text-uppercase text-center font-secondary">Why Choose Us</h2>
+      </div>
+    </div>
+    <div class="row border-responsive">
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-0 border-right">
+        <div class="text-center">
+          <span class="flaticon-customer-service display-4 d-block mb-3 text-primary"></span>
+          <h3 class="text-uppercase h4 mb-3">Our schedules</h3>
+          <p>Monday to Saturday, uninterrupted schedule from 9:00 am to 4:00 pm.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-0 border-right">
+        <div class="text-center">
+          <span class="flaticon-group display-4 d-block mb-3 text-primary"></span>
+          <h3 class="text-uppercase h4 mb-3">Service</h3>
+          <p>Our attention to and excellent service for our customers defines us.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="text-center">
+          <span class="flaticon-agreement display-4 d-block mb-3 text-primary"></span>
+          <h3 class="text-uppercase h4 mb-3">Join With Us</h3>
+          <p>We are a young company, dedicated to providing the best attention and service to our clients.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
